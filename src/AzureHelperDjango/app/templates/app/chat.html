@@ -19,20 +19,20 @@
           {% if msg.user == user %}
             <!-- outgoing -->
             <div class="flex justify-end">
-              <div class="primary-color bg-white px-5 py-3 rounded-lg max-w-xs break-words">
+              <div class="text-color bg-white px-5 py-3 rounded-lg max-w-xs break-words">
                 {{ msg.text }}
               </div>
             </div>
           {% else %}
             <!-- incoming -->
             <div class="flex justify-start">
-              <div class="secondary-color bg-gray-100 px-5 py-3 rounded-lg max-w-xs break-words">
+              <div class="text-color bg-gray-100 px-5 py-3 rounded-lg max-w-xs break-words">
                 {{ msg.text }}
               </div>
             </div>
           {% endif %}
         {% empty %}
-          <p class="text-center secondary-color italic">No messages yet…</p>
+          <p class="text-center secondary-color italic">Ask a question…</p>
         {% endfor %}
       </div>
 
@@ -42,7 +42,7 @@
         <input
             type="text"
             name="message"
-            placeholder="Type your message…"
+            placeholder="Type your question…"
             class="flex-1 py-3 px-4 border border-gray-300 rounded-l-lg focus:outline-none text-sm"
         />
         <button

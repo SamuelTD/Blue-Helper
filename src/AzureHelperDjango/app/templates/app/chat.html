@@ -20,14 +20,14 @@
             <!-- outgoing -->
             <div class="flex justify-end">
               <div class="text-color bg-white px-5 py-3 rounded-lg max-w-xs break-words">
-                {{ msg.text }}
+                {{ msg.text|urlize }}
               </div>
             </div>
           {% else %}
             <!-- incoming -->
             <div class="flex justify-start">
               <div class="text-color bg-gray-100 px-5 py-3 rounded-lg max-w-xs break-words">
-                {{ msg.text }}
+                {{ msg.text|urlize }}
               </div>
             </div>
           {% endif %}

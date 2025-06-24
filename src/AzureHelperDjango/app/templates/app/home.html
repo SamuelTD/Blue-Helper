@@ -4,6 +4,30 @@
 
 {% block content %}
 
-<h1>Hello this is our Azure Helper Bot!</h1>
+<div class="relative min-h-screen flex items-center justify-center p-6 bg-secondary">
+
+  <!-- CENTRAL CARD -->
+  <div class="z-10 bg-white rounded-xl shadow-lg p-8 max-w-lg w-full text-center border-2 border-primary">
+    <h1 class="text-4xl sm:text-5xl font-extrabold text-color mb-4">
+      Welcome to Azure Bot Helper
+    </h1>
+    <p class="text-lg secondary-color mb-8">
+      Ask questions, get instant answers, and streamline your Azure workflows—all through a simple, intuitive chat interface.
+    </p>
+    <a href="{% url 'chat' %}" class="slick-button inline-block">
+      Start Chatting
+    </a>
+  </div>
+
+  <div id="cloud-container">
+
+  </div>
+  <script>
+    window.CLOUD_SRC = "{% static 'images/cloud.png' %}";
+</script>
+  <script src="{% static 'js/clouds.js' %}"></script>
+</div>
 
 {% endblock content %}
+
+

@@ -155,3 +155,48 @@ nav.inline {
   transform: translateY(0);
   filter: brightness(0.8);
 }
+
+#messages a {
+  /* use Tailwind’s blue-500 color */
+  color: #3B82F6;
+  text-decoration: underline;
+}
+
+/* optional: on hover, darken a bit */
+#messages a:hover {
+  color: #1E40AF;
+}
+
+.cloud {
+    position: absolute;
+    width: 8rem; 
+    /* set up CSS vars for animation */
+    --dx: 0px;
+    --dy: 0px;
+    --s: 1;
+    transform: translate(0,0) scale(var(--s));
+    animation-name: float;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  /* Idle float: go from translate(0,0) to translate(dx,dy) & keep scale(s) */
+  @keyframes float {
+    to {
+      transform: translate(var(--dx), var(--dy)) scale(var(--s));
+    }
+  }
+
+  /* Center text inside each cloud */
+  .cloud .label {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 0.875rem;
+  }

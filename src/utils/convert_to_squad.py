@@ -48,7 +48,7 @@ for item in raw_data:
             }
         ]
     })
-    
+
     index += 1
 
 # Save as SQuAD-style JSON

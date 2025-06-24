@@ -7,7 +7,6 @@ from app.models.user import User
 from app.db.session import get_session
 from app.core.security import get_password_hash, verify_password
 from app.utils.jwt_handler import create_access_token
-from pydantic import BaseModel
 
 router = APIRouter()
 
@@ -17,7 +16,7 @@ def register(user: UserCreate, session: Session = Depends(get_session)):
     existing_user = session.exec(statement).first()
     if existing_user:
         raise HTTPException(status_code=400, detail="Nom d'utilisateur déjà utilisé")
-    
+
     hashed_password = get_password_hash(user.password)
     db_user = User(username=user.username, email=user.email, hashed_password=hashed_password)
     session.add(db_user)

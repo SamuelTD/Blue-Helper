@@ -18,14 +18,14 @@ def get_current_user(token: str = Security(oauth2_scheme)) -> dict:
     Raises:
         HTTPException: If the token is invalid or expired.
     """
-    
+
     payload = verify_token(token)
-    
+
     user_id: int = payload.get("id")
 
     if user_id is None:
         raise HTTPException(status_code=401, detail="Invalid token")
-    
+
     conn = get_db_connection()
     cursor = conn.cursor()
 

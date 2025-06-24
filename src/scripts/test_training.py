@@ -1,6 +1,5 @@
 import json
 from transformers import pipeline
-from pprint import pprint
 
 # === CONFIG ===
 model_path = "src/models/v02"        # Path to your fine-tuned model directory

@@ -88,8 +88,8 @@ def main():
     for item in raw_datasets["train"]:
         train_data.extend(flatten_squad(item))
     train_dataset = Dataset.from_list(train_data)
-    
-    
+
+
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModelForQuestionAnswering.from_pretrained(model_name)
 

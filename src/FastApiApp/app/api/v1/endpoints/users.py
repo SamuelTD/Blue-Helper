@@ -22,7 +22,7 @@ def read_users_me(token: str = Depends(oauth2_scheme), session: Session = Depend
     username: str = payload.get("sub")
     if username is None:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Token invalide")
-    
+
     statement = select(User).where(User.username == username)
     user = session.exec(statement).first()
     if user is None:

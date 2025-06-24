@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+ <!-- Centering wrapper -->
+  <div class="min-h-screen flex items-center justify-center p-6">
+
+    <!-- Chat container -->
+    <div
+      class="w-full max-w-md bg-white shadow-lg rounded-xl overflow-hidden
+             border-2 border-primary py-8 px-6 flex flex-col"
+    >
+
+      <!-- Messages area -->
+      <div id="messages" class="flex-1 px-6 py-6 overflow-y-auto space-y-6">
+        {% for msg in messages %}
+          {% if msg.user == user %}
+            <!-- outgoing -->
+            <div class="flex justify-end">
+              <div class="text-color bg-white px-5 py-3 rounded-lg max-w-xs break-words">
+                {{ msg.text }}
+              </div>
+            </div>
+          {% else %}
+            <!-- incoming -->
+            <div class="flex justify-start">
+              <div class="text-color bg-gray-100 px-5 py-3 rounded-lg max-w-xs break-words">
+                {{ msg.text }}
+              </div>
+            </div>
+          {% endif %}
+        {% empty %}
+          <p class="text-center secondary-color italic">Ask a question…</p>
+        {% endfor %}
+      </div>
+
+        <!-- Input area -->
+        <form method="post" class="px-6 mt-6 flex items-center border-t border-gray-200 pt-4">
+        {% csrf_token %}
+        <input
+            type="text"
+            name="message"
+            placeholder="Type your question…"
+            class="flex-1 py-3 px-4 border border-gray-300 rounded-l-lg focus:outline-none text-sm"
+        />
+        <button
+            type="submit"
+            class="slick-button ml-3"
+        >
+            Send
+        </button>
+        </form>
+    </div>
+
+  </div>
+
+{% endblock content %}

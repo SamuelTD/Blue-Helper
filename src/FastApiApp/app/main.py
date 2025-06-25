@@ -3,6 +3,9 @@ from contextlib import asynccontextmanager
 from app.api.v1.endpoints import auth, users, azurehelper
 from app.db.session import engine
 from sqlmodel import SQLModel
+import warnings
+warnings.filterwarnings("ignore", category=UserWarning, module="multiprocessing.resource_tracker")
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):

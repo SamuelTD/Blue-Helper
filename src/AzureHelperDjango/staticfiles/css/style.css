@@ -156,33 +156,6 @@ nav.inline {
   filter: brightness(0.8);
 }
 
-.slick-button-secondary {
-  display: inline-flex;            /* make the <a> a flex container */
-  align-items: center;             /* center vertically */
-  justify-content: center;         /* center horizontally */
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 0.375rem;    /* 6px rounded corners */
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.1s ease;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.slick-button-secondary:hover {
-  /* slightly lift and darken */
-  filter: brightness(0.9);
-  transform: translateY(-1px);
-}
-
-.slick-button-secondary:active {
-  /* reset lift */
-  transform: translateY(0);
-  filter: brightness(0.8);
-}
-
 #messages a {
   /* use Tailwind’s blue-500 color */
   color: #3B82F6;
@@ -227,22 +200,3 @@ nav.inline {
     color: var(--text-color);
     font-size: 0.875rem;
   }
-
-  #cloud-container {
-  position: absolute;
-  inset: 0;            /* top:0; right:0; bottom:0; left:0 */
-  pointer-events: none;/* clicks pass through to your card */
-  z-index: 0;          /* behind your z-10 card */
-}
-
-.cloud-label {
-  position: absolute;
-  inset: 7.5%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 0.5rem;
-  text-align: center;
-  word-break: break-word;
-  line-height: 1.1;
-}

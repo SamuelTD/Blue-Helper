@@ -19,5 +19,5 @@ def Login():
         "Authorization": f"Bearer {token}",
         "Content-Type": "application/json",
     }
-    
+
     return headers

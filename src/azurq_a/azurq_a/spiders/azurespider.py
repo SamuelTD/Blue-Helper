@@ -21,12 +21,12 @@ class AzureAnswersSpider(scrapy.Spider):
         #     yield response.follow(link, callback=self.parse_question)
         # Pagination
         nb_page = int(response.css("a.pagination-next::text").get())
-       
+
 
         for x in range(0,nb_page):
             yield response.follow(f'https://learn.microsoft.com/en-us/answers/questions/?filterby=withacceptedanswer&page={x}', callback=self.parse_page)
-        
-       
+
+
     def parse_page(self, response):
         for question_box in response.css("div.box.margin-bottom-xxs"):
             title_tag = question_box.css("h2.title.is-6.margin-bottom-xxs a")

@@ -1,0 +1,34 @@
+Docker, container, registry ; https://learn.microsoft.com/en-us/azure/devops/pipelines/ecosystems/containers/acr-template?view=azure-devops
+Container registry ; https://learn.microsoft.com/en-us/azure/container-registry/container-registry-authentication?tabs=azure-cli
+Data Lake Storage ; https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction
+Azure Storage Documentation ; https://learn.microsoft.com/en-us/azure/storage/
+Azure Blob Storage ; https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-overview
+Jobs in Azure Container Apps ; https://learn.microsoft.com/en-us/azure/container-apps/jobs?tabs=azure-cli
+Guidance for developing Azure Functions ; https://learn.microsoft.com/en-us/search/?terms=Azure%20functions
+Microsoft Fabric documentation ; https://learn.microsoft.com/en-us/fabric/
+What is the Power Bi service ; https://learn.microsoft.com/en-us/power-bi/fundamentals/power-bi-service-overview
+Microsoft 365 admin center help ; https://learn.microsoft.com/en-us/microsoft-365/admin/?view=o365-worldwide
+Azure Machine Learning Studio ; https://azure.microsoft.com/fr-fr/products/machine-learning/#Resources
+Azure security documentation ; https://learn.microsoft.com/en-us/azure/security/
+Create a virtual machine in the Azure Portal ; https://learn.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-portal
+Azure Databricks documentation ; https://learn.microsoft.com/en-us/azure/databricks/
+Azure SQL Database ; https://learn.microsoft.com/en-us/azure/azure-sql/
+Azure Cosmos DB ; https://learn.microsoft.com/en-us/azure/cosmos-db/introduction
+Azure Kubernetes Service (AKS) ; https://learn.microsoft.com/en-us/azure/aks/
+Azure App Service ; https://learn.microsoft.com/en-us/azure/app-service/
+Azure Virtual Network ; https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview
+Azure Load Balancer ; https://learn.microsoft.com/en-us/azure/load-balancer/load-balancer-overview
+Azure Traffic Manager ; https://learn.microsoft.com/en-us/azure/traffic-manager/traffic-manager-overview
+Azure DNS ; https://learn.microsoft.com/en-us/azure/dns/dns-overview
+Azure Application Gateway ; https://learn.microsoft.com/en-us/azure/application-gateway/overview
+Azure Firewall ; https://learn.microsoft.com/en-us/azure/firewall/overview
+Azure Key Vault ; https://learn.microsoft.com/en-us/azure/key-vault/general/overview
+Azure Monitor ; https://learn.microsoft.com/en-us/azure/azure-monitor/overview
+Azure Log Analytics ; https://learn.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-overview
+Azure Backup ; https://learn.microsoft.com/en-us/azure/backup/backup-overview
+Azure Site Recovery ; https://learn.microsoft.com/en-us/azure/site-recovery/site-recovery-overview
+Azure Data Factory ; https://learn.microsoft.com/en-us/azure/data-factory/introduction
+Azure Synapse Analytics ; https://learn.microsoft.com/en-us/azure/synapse-analytics/get-started
+Azure Event Hubs ; https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-about
+Azure Service Bus ; https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview
+Azure Logic Apps ; https://learn.microsoft.com/en-us/azure/logic-apps/logic-apps-overview

@@ -7,7 +7,7 @@
 <div class="relative min-h-screen flex items-center justify-center p-6 bg-secondary">
 
   <!-- CENTRAL CARD -->
-  <div class="z-10 bg-white rounded-xl shadow-lg p-8 max-w-lg w-full text-center border-2 border-primary">
+  <div id="central-card" class="z-10 bg-white rounded-xl shadow-lg p-8 max-w-lg w-full text-center border-2 border-primary">
     <h1 class="text-4xl sm:text-5xl font-extrabold text-color mb-4">
       Welcome to Azure Bot Helper
     </h1>
@@ -24,7 +24,10 @@
   </div>
   <script>
     window.CLOUD_SRC = "{% static 'images/cloud.png' %}";
-</script>
+    window.CLOUDS_CSV_URL = "{% static 'data/doc_links.csv' %}";
+  </script>
+   
+  <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
   <script src="{% static 'js/clouds.js' %}"></script>
 </div>
 

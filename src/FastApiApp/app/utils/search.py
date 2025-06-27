@@ -1,10 +1,9 @@
 from app.utils.model import model
 from app.utils.clean import clean_answer
-import numpy as np
-from deep_translator import GoogleTranslator # ou DeepLTranslator 
+from deep_translator import GoogleTranslator # ou DeepLTranslator
 
 
-def search_similar_questions(index, questions, answers, query, top_k=1, target_lang="en"):
+def search_similar_questions(index, questions, answers, query, top_k=3, target_lang="en"):
     # Étape 1 : Traduction de la question utilisateur vers l'anglais (langue du modèle)
     query_translated = GoogleTranslator(source='auto', target=target_lang).translate(query)
     #query_translated = query

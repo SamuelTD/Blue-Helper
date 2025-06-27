@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="relative min-h-screen flex items-center justify-center p-6 bg-secondary">
+
+  <!-- CENTRAL CARD -->
+  <div id="central-card" class="z-10 bg-white rounded-xl shadow-lg p-8 max-w-lg w-full text-center border-2 border-primary">
+    <h1 class="text-4xl sm:text-5xl font-extrabold text-color mb-4">
+      Welcome to Azure Bot Helper
+    </h1>
+    <p class="text-lg secondary-color mb-8">
+      Ask questions, get instant answers, and streamline your Azure workflows—all through a simple, intuitive chat interface.
+    </p>
+    <a href="{% url 'chat' %}" class="slick-button inline-block">
+      Start Chatting
+    </a>
+  </div>
+
+  <div id="cloud-container">
+
+  </div>
+  <script>
+    window.CLOUD_SRC = "{% static 'images/cloud.png' %}";
+    window.CLOUDS_CSV_URL = "{% static 'data/doc_links.csv' %}";
+  </script>
+   
+  <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="{% static 'js/clouds.js' %}"></script>
+</div>
+
+{% endblock content %}
+
+

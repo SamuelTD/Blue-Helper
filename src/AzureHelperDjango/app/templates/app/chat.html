@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- Centering wrapper: full‐screen, flex‐column, items centered -->
+<div class="min-h-screen flex flex-col items-center justify-center p-6">
+
+  <!-- Chat container -->
+  <div
+    class="w-full max-w-md bg-white shadow-lg rounded-xl overflow-hidden
+           border-2 border-primary py-8 px-6 flex flex-col"
+  >
+
+    <!-- Messages -->
+    <div id="messages" class="flex-1 px-6 py-6 overflow-y-auto space-y-6">
+      {% if question %}
+        <!-- user question on the right -->
+        <div class="flex justify-end">
+          <div class="text-color bg-white px-5 py-3 rounded-lg max-w-xs break-words">
+            {{ question|urlize }}
+          </div>
+        </div>
+        <!-- current answer on the left -->
+        <div class="flex justify-start">
+          <div class="text-color bg-gray-100 px-5 py-3 rounded-lg max-w-xs break-words">
+            {{ answer|urlize }}
+          </div>
+        </div>
+      {% else %}
+        <p class="text-center secondary-color italic">Ask a question…</p>
+      {% endif %}
+    </div>
+
+    <!-- Input -->
+    <form method="post" class="px-6 mt-6 flex items-center border-t border-gray-200 pt-4">
+      {% csrf_token %}
+      <input
+        type="text"
+        name="message"
+        placeholder="Type your question…"
+        class="flex-1 py-3 px-4 border border-gray-300 rounded-l-lg focus:outline-none text-sm"
+        value=""
+      />
+      <button
+        type="submit"
+        name="action"
+        value="ask"
+        class="slick-button ml-3"
+      >
+        Send
+      </button>
+    </form>
+
+  </div>
+  <!-- /Chat container -->
+
+  <!-- Buttons row, under the box -->
+  <div class="mt-6 flex justify-center gap-x-8">
+    <!-- More button as its own form -->
+    <form method="post">
+      {% csrf_token %}
+      <button
+        type="submit"
+        name="action"
+        value="next"
+        class="slick-button-secondary w-32 {% if not has_next %}opacity-50 cursor-not-allowed{% endif %}"
+        {% if not has_next %}disabled{% endif %}
+      >
+        More
+      </button>
+    </form>
+
+    <a href="{% url 'home' %}" class="slick-button-secondary w-32">Return</a>
+  </div>
+
+</div>
+<!-- /Centering wrapper -->
+
+{% endblock content %}
+
